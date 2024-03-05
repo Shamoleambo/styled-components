@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components'
+import GlobalStyles from './components/styled/GlobalStyles.styled'
 import { Header } from './components/Header'
 import { Container } from './components/styled/Container.styled'
 
@@ -12,14 +13,13 @@ const theme = {
 
 function App() {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Header />
-        <Container>
-          <h1>Hello Styled Components</h1>
-        </Container>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Header />
+      <Container>
+        <h1>Hello Styled Components</h1>
+      </Container>
+    </ThemeProvider>
   )
 }
 
